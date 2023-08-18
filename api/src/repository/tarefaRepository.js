@@ -27,14 +27,14 @@ export async function selecionarFinalizados(){
     let [resp]=await connection.query(command);
     return (resp);
 }
-let col='NR_ORDEM';
+
 export async function alterarRegistro(coluna,valor,registro){
 
     let command=`UPDATE TB_TAREFA
-                Set ${col}=?
+                Set ${coluna}=?
                 WHERE ID_TAREFA=?`;
 
-    let [resp]=await connection.query(command, [coluna,valor,registro]);
+    let [resp]=await connection.query(command, [valor,registro]);
     return (resp);
 }
 
