@@ -1,0 +1,65 @@
+1 - POST    'tarefa'
+Função: adicionar uma tarefa na tabela
+
+Request body
+
+{
+    descTarefa: '',
+    ordemTarefa: 0,
+    finalizacaoTarefa: ''
+}
+
+Response (204)
+--Sem resposta
+
+2 - GET     'tarefas'
+Função: consulta as tarefas do banco de dados
+
+Request (nenhum)
+
+Response
+[
+    {
+        descTarefa: '',
+        ordemTarefa: 0,
+        finalizacaoTarefa: '',
+        cadastroTarefa:AAAA-MM-DD
+    }
+]
+
+3 - GET     'tarefas/:finalizacao'
+Função: Consulta somente tarefas finalizadas
+
+Request 
+Response
+[
+    {
+        descTarefa: '',
+        ordemTarefa: 0,
+        finalizacaoTarefa: 'Finalizada',
+        cadastroTarefa:AAAA-MM-DD
+    }
+]
+
+4 - PUT     'tarefa'
+Função: Alterar informações de uma tarefa
+
+Request Body 
+{
+    descTarefa: '',
+    ordemTarefa: 0,
+    finalizacaoTarefa: '', 
+}
+
+Response(204)
+
+Request Body 
+{
+    descTarefa: '',
+    ordemTarefa: 0,
+    finalizacaoTarefa: '', 
+}
+
+5 - DELETE   'tarefa'
+Função: Deletar uma tarefa digitada pelo usuário
+Response(204)
